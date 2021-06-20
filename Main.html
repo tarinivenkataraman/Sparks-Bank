@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div id="banner">
+        <div class="banner-text">
+            <h1>Sparks Bank.</h1>
+            <p>We are here to make online transactions easy and convenient.</p>
+            <div class="banner-btn">
+                <a href="registration.php"><span></span>Register Yourself</a>
+            </div>
+        </div>
+    </div>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME.</a></li>
+                <li><a href="">ABOUT US.</a></li>
+                <li><a href="">CONTACT US.</a>
+                </li>
+                <li><a href="php/users.php">OUR USERS.</a></li>
+                <li><a href="">LOGIN.</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menubtn">
+        <img src="images/menu.png" alt="" id="menu">
+    </div>
+    <section id="feature">
+        <div class="title-text">
+            <p>Services.</p>
+            <h1>Facilities Provided.</h1>
+        </div>
+        <div class="service-box">
+            <div class="single-service">
+                <img src="images/hisctory.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>View Transaction History.</h3>
+                    <hr>
+                    <a href="php/history.php"><button class="btn btn-primary">View Transaction History</button></a>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="images/transaction.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Transfer Funds.</h3>
+                    <hr>
+                    <a href="php/transfer.php"><button class="btn btn-primary">Make Transactions.</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy;Tarini <script>document.write(new Date().getFullYear());</script></p>
+    </footer>
+
+    <script>
+        var menubtn = document.getElementById("menubtn");
+        var sidenav = document.getElementById("sidenav");
+        var menu = document.getElementById("menu");
+        menubtn.onclick = function () {
+            if (sidenav.style.right == "-250px") {
+                sidenav.style.right = "0"
+                menu.src = "images/close.png";
+            }
+            else {
+                sidenav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+    </script>
+   <script>
+    setTimeout(function(){$('#preloader').hide();}, 2000); 
+      var preloader = document.getElementById("preloader");
+          function loader(){
+            preloader.style.display = 'none';
+          }
+    </script>
+</body>
+
+</html>
